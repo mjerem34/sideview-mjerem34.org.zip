@@ -1,0 +1,55 @@
+{
+    "manifest_version": 2,
+    "name": "SideView",
+    "version": "0.4.6423",
+    "description": "Open a mobile view of a page in the sidebar",
+    "icons": {
+      "48": "side-view.png",
+      "96": "side-view.png"
+    },
+    "author": "Jeremy Montesinos",
+    "homepage_url": "https://github.com/mozilla/side-view/",
+    "applications": {
+      "gecko": {
+        "id": "sideview@mjerem34.org",
+        "strict_min_version": "57.0a1"
+      }
+    },
+    "background": {
+      "scripts": [
+        "build/buildSettings.js",
+        "background.js"
+      ]
+    },
+    "browser_action": {
+      "default_icon": "side-view.svg",
+      "default_popup": "popup.html",
+      "default_title": "Open Side View",
+      "browser_style": true
+    },
+    "sidebar_action": {
+      "default_icon": "side-view.svg",
+      "default_title": "Side View",
+      "default_panel": "sidebar.html",
+      "browser_style": false
+    },
+    "page_action": {
+      "default_icon": "side-view.svg",
+      "default_title": "Open Side View",
+      "show_matches": ["http://*/*", "https://*/*"],
+      "browser_style": true
+    },
+    "web_accessible_resources": [
+    ],
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "<all_urls>",
+      "storage",
+      "contextMenus",
+      "webRequest",
+      "webRequestBlocking",
+      "bookmarks",
+      "management"
+    ]
+  }
